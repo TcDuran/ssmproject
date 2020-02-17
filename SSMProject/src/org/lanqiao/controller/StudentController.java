@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @RequestMapping("controller")
-@Controller//StudentController加入Ioc容器
+@Controller//StudentController鍔犲叆Ioc瀹瑰櫒 1111111
 public class StudentController {
-	//控制器依赖于Service
+	//鎺у埗鍣ㄤ緷璧栦簬Service
 	@Autowired
 	@Qualifier("studentService") 
 	private StudentService  studentService;
@@ -24,7 +24,7 @@ public class StudentController {
 		this.studentService = studentService;
 	}
 	
-//	查询全部学生
+//	鏌ヨ鍏ㄩ儴瀛︾敓
 	@RequestMapping("queryStudents")
 	public ModelAndView list() {
 		ModelAndView mav = new ModelAndView();
@@ -36,7 +36,7 @@ public class StudentController {
 
 
 
-//	返回主页
+//	杩斿洖涓婚〉
 	@RequestMapping("fanhui")
 	public ModelAndView fanhui() {
 		ModelAndView mav = new ModelAndView("redirect:/index.jsp");
